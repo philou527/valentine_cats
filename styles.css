@@ -1,0 +1,74 @@
+@font-face {
+    font-family: 'Love';
+    src: url('img/love.woff') format('woff'); /* Format WOFF */
+}
+body {
+    /* Dégradé de couleur */
+    background: linear-gradient(to bottom, #FFC0CB, #FFFFFF);
+    /* Assure que le dégradé occupe toute la hauteur de la page */
+    height: 100vh;
+    /* Assure que le contenu est centré horizontalement et verticalement */
+    font-family: 'Love', sans-serif;
+}
+
+h1,h2 {
+    display: flex;
+    justify-content: center; /* Alignement horizontal */
+    align-items: center; /* Alignement vertical */
+    /* Facultatif : définit la police par défaut pour la page */
+    /* Élimine les marges par défaut du corps */
+    color: #eb37cd;
+    margin: 0;
+}
+/* Stylisation des boutons */
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    
+}
+
+/* Bouton "Yes" en vert */
+#yesB {
+    background-color: #4CAF50;
+    color: white;
+    margin-right: 10px;
+}
+#yesB:hover {
+    background-color: #2f7031;
+    color: white;
+    transform: scale(1.05);
+}
+
+/* Bouton "No" en rouge */
+#noB {
+    background-color: #f44336;
+    color: white;
+}
+#noB:hover {
+    background-color: #6e1d17;
+    color: white;
+    transform: scale(1.05);
+}
+
+@keyframes wave {
+    0% {
+        transform: translateX(0) translateY(0);
+    }
+    50% {
+        transform: translateX(10px) translateY(5px);
+    }
+    100% {
+        transform: translateX(0) translateY(0);
+    }
+}
+
+#pic-container {
+    display: inline-block; /* Ensures the container wraps around the image */
+}
+
+#cat {
+    animation: wave 1s infinite; /* Apply the animation to the image */
+}
